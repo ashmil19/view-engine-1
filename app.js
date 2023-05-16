@@ -8,5 +8,7 @@ app.listen(3000);
 
 app.get('/',(req, res)=>{
     
-    res.render('index');
+    const players = ['Messi','Ronaldo','Neymar','Mbappe','Salah','Ozil','Benzina','Halland','Dybala'];
+
+    res.render('index',{players});
 })

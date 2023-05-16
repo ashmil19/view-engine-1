@@ -14,10 +14,19 @@
 
     <div class="container mt-3">
 
-        <div class="card bg-dark text-white">
-            <div class="card-body">Dark card</div>
-        </div>
-        
+        <% if(players.length > 0){ %>
+            <% players.forEach(player => { %>
+                <div class="card bg-dark text-white">
+                    <div class="card-body text-center"><%= player %></div>
+                </div>
+                <br>
+            <% }) %>
+        <% } else { %>
+            <div>
+                There is no players added.
+            </div>
+        <% } %>
+
     </div>
 
 </body>
